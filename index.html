@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div{
+            border: 2px solid black;
+            padding: 5px;
+            margin: 5px;
+            max-width: max-content;
+        }
+        .layout{
+            display: flex;
+            justify-content: space-around;
+        }
+        .cards{
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1> purchase $200 or above & get 20% off</h1>
+        <p>Promo code: SELL200</p>
+    </main>
+    <section class="layout">
+
+        <div>
+
+            <div class="cards">
+                <div class="card">
+                    <p>Card 1</p>
+                    <p class="prs">$ 44.00 </p>
+                </div>
+                <div class="card">
+                    <p>Card 2</p>
+                    <p class="prs">$ 39.00 </p>
+                </div>
+                <div class="card">
+                    <p>Card 3</p>
+                    <p class="prs">$ 20.00 </p>
+                </div>
+            </div>
+
+            <div class="cards">
+                <div class="card">
+                    <p>Card 4</p>
+                    <p class="prs">$ 35.00 </p>
+                </div>
+                <div class="card">
+                    <p>Card 5</p>
+                    <p class="prs">$ 77.00 </p>
+                </div>
+                <div class="card">
+                    <p>Card 6</p>
+                    <p class="prs">$ 80.00 </p>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div>
+                <input id="input-field" type="text" placeholder="Discount Code">
+            <button id="apply-btn">Apply</button>
+            </div>
+            <div>
+                <!-- Append selected pdt  here-->
+                <p>Your selected pdts list</p>
+                <div id="title-container">
+
+                </div>
+            </div>
+    
+            <div>
+                <P>Total price: $ <span id="totalPrice"></span> </P>
+                <p>Discount: $ <span id="discountPrice"></span></p>
+                <p>Total: $ <span id="total"></span></p>
+            </div>
+            <div>
+
+                <!-- Open the modal using ID.showModal() method -->
+                <button class="btn" onclick="my_modal_1.showModal()">open modal</button>
+                <dialog id="my_modal_1" class="modal">
+                    <div class="modal-box">
+                        <h3 class="font-bold text-lg">Hello!</h3>
+                        <p class="py-4">Press ESC key or click the button below to close</p>
+                        <div class="modal-action">
+                            <form method="dialog">
+                                <!-- if there is a button in form, it will close the modal -->
+                                <button class="btn">Close</button>
+                            </form>
+                        </div>
+                    </div>
+                </dialog>
+
+
+                <button>Make purchase</button>
+            </div>
+        </div>
+
+        
+
+    </section>
+
+
+   
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
